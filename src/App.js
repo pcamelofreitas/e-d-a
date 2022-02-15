@@ -100,19 +100,19 @@ class App extends Component{
 
                         {/* barra de navegação */}
                         <Navigation onrRouteChange={this.onRouteChange} personagem={personagem}/>
-                        {/* <Ref1/> */}
+                        <Ref1 goToRef={this.goToRef}/>
 
                         {/* conteudo */} 
-                        <div className='row d-inline text-center'>
+                        {/* <div className='row d-inline text-center'>
                             <div  className='col vh-75'>
                                 <h2 className='f1'>{conteudo[id].ref}</h2>
                                 <img alt="imagem-da-sec" src={conteudo[id].img} height="250px"/>
                                 <p>{conteudo[id].texto}</p>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* barra de botoes */}
-                         <div className='row  h-25 w-100 d-inline-block '>
+                         {/* <div className='row  h-25 w-100 d-inline-block '>
                             <div className='d-flex justify-content-around '>
                                 {conteudo[this.state.id].btns.map((btn, index) => 
                                     <Button 
@@ -123,7 +123,7 @@ class App extends Component{
                                     </Button>
                                 )}
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                         
                         

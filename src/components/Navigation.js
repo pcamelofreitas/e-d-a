@@ -6,7 +6,7 @@ const Navigation=({personagem})=>{
 
     //função para tornar os itens em lista
     function createList(params) {
-      return <li>{params}</li>  
+      return <li key={params}>{params}</li>  
     }
     const itens = personagem.bolsa.map(createList);
     

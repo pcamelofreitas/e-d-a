@@ -1,9 +1,9 @@
-const Ref1 =({goToRef})=>{
+const Ref1 =(goToRef)=>{
     return(
         <div>
             <div className='row d-inline text-center'>
                 <div  className='col vh-75'>
-                    <h2 className='f1'>1</h2>
+                    <h2 className='f1'>Referência 1</h2>
                     <img alt="imagem-da-sec" src=""height="250px"/>
                     <p>
                         Como você pode recusar tal apelo?
@@ -12,17 +12,17 @@ const Ref1 =({goToRef})=>{
                         Você ouve os quatros nobres falarem de seus planos.
                         Um de vocês precisa cavalgar para as passagens norte e chamar o exército, outro deve seguir para leste para investigar os invasores.
                         O resto deve permanecer em Kallamehr e usar de toda sua inteligência e iventividade para preparar uma defesa.
-                        O que você vai fazer.
-                        Voluntariar-se para
-                    </p>
+                        O que você vai fazer.</p>
+                        <h4>Voluntariar-se para:</h4>
+                    
                 </div>
             </div>
             <div>
-            <div className='d-flex justify-content-around '>
-                    <button onClick={goToRef(92)}>Vonluntariar-se Para Cavalgar para o norte até o exército?</button>
-                    <button onClick={goToRef(104)}>Vonluntariar-se para investigar no leste?</button>
-                    <button onClick={goToRef(288)}>Ficar para defender a cidade?</button>
-                 </div>
+                <div className='d-flex justify-content-around '>
+                    <button variant="dark" onClick={'goToRef(92)'}>Vonluntariar-se Para Cavalgar para o norte até o exército?</button>
+                    <button variant="dark" onClick={'goToRef(104)'}>Vonluntariar-se para investigar no leste?</button>
+                    <button variant="dark" onClick={'goToRef(288)'}>Ficar para defender a cidade?</button>
+                </div>
             </div> 
         </div>
     )

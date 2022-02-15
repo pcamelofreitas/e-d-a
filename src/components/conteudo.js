@@ -31,16 +31,13 @@ export const conteudo = [
           A vida continua, mas sem os muitos guerreiros brilhantes vestidos que costumavam desfilar orgulhosamente pelas ruas de kallamehr.
           sem os soldados, os criminosos atacam.
           Você tranca a porta do seu quarto à noite e dorme com a espada ao lado de sua cama.
-          <br>
-          <br>          
+                  
           Algumas semanas se passam.
           Então, uma manhã, um mensageiro de olhos arregalados entra na cidade, gritando incoerentes avisos de invasão vinda do leste.
           Menos de uma hora depois que ele desaparece dentro do palácio, um servo lhe traz uma carta com o selo da Casa de Rangor.
           É uma convocação para comparecer diante da própria Lady Carolina!
           Parece que sua fama de aventureiro chegou até os ouvidos dela, e nesses dias negros a Lady necessita de guerreiros destemidos.
-          <br>
-          <img/>
-          <br>
+         
           Quando chega ao palácio, você se vê em meio a dez outros aventureiros.
           Muitos são conhecidos de vista, mas uma, Sophia de Blacksand, é bem conhecida, pois já viveu aventuras com ela em mais de uma ocasião.
           Antes que tenham tempo de cumprimentarem-se, ou se apresentarem, um servo os leva para dentro.
