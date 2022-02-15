@@ -1,0 +1,20 @@
+.atributos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.equipamentos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+h4{
+    margin: 0;
+}
+p{
+    margin:0;
+    
+}
+.ficha{
+    text-align: left;
+    border-color: rgb(33, 11, 129);
+    border-width: 5px;
+}
