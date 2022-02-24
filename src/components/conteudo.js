@@ -1,10 +1,8 @@
-
 export const conteudo = [
-    {
-      ref:'Histórico',
-      img:'https://svgsilh.com/svg/2027035.svg',
-      texto: 
-        `Estes são tempos dificeis em Kallamehr.
+  {
+    ref: "Histórico",
+    img: "https://svgsilh.com/svg/2027035.svg",
+    texto: `Estes são tempos dificeis em Kallamehr.
         Nem bem a soberana, Lady Carolina, recuperou-se da morte de seu marido, 
         foi jogada em uma guerra com o estado rival de comercio, Alkemis.
         Depois de uma batalha marítima, onde muitasvidas foram perdidas, parecia que Kallamehr iria se impor. 
@@ -15,17 +13,18 @@ export const conteudo = [
         As passagens das montanhas na fronteira poderiam ser defendidas facilmente.
         Entretanto se fosse permitido que os exercitos de Bei-Han chegassem às grandes planíces de Kallamehr, 
         eles causariam incomensuráveis danos.`,
-      btns: [1
-    //       {
-    //     funcao: goToEvent('Inicio'),
-    //     texto:'inicio'
-    //   }
-    ] 
-    },
-    {
-      ref: 1,
-      img: '',
-      texto: `
+    btns: [
+      {
+        btn: 1,
+        // funcao: () => goToRef(1),
+        texto: "inicio",
+      },
+    ],
+  },
+  {
+    ref: 1,
+    img: "",
+    texto: `
           Você chega a Kallamehr quando as últimas tropas estão partindo.
           Você se vê em meio a uma cidade estranhamente deserta.
           A vida continua, mas sem os muitos guerreiros brilhantes vestidos que costumavam desfilar orgulhosamente pelas ruas de kallamehr.
@@ -61,83 +60,84 @@ export const conteudo = [
           <br>
           <img/>
           `,
-      btns:[2]}
-        //   {
-//         função: goToRef(1), 
-//         texto: 'AGORA VÁ PARA A REFERÊNCIA 1', 
-//       }]
-//     },
-//     {
-//       ref: 1,
-//       img:'',
-//       texto:
-//         `Como você pode recusar tal apelo?
-//         Os outros dez são rápidos em se oferecer para a missão, e sua voz se junta aos outros, jurando fidelidade a Lady Carolina.
-//         Essa é sua chance de se tornar mais que um aventureiro, você será um verdadeiro herói de lendas!
-//         Você ouve os quatros nobres falarem de seus planos.
-//         Um de vocês precisa cavalgar para as passagens norte e chamar o exército, outro deve seguir para leste para investigar os invasores.
-//         O resto deve permanecer em Kallamehr e usar de toda sua inteligência e iventividade para preparar uma defesa.
-//         O que você vai fazer.
-//         Voluntariar-se para
-//         `,
-//       btns: [
-//         {
-//           irpara: 92,
-//           funcao: goToRef(92),
-//           texto: 'Vonluntariar-se Para Cavalgar para o norte até o exército?'
-//         },
-//         {
-//           irpara: 104,
-//           funcao: goToRef(104),
-//           texto: 'Vonluntariar-se para investigar no leste?'
-//         },
-//         {
-//           irpara: 288,
-//           funcao: goToRef(288),
-//           texto: 'Ficar para defender a cidade?'
-//         }
-//       ]
-//     },
-//     {
-//       ref: 92,
-//       img:'',
-//       texto:`Antes que parta, Lady Carolina lhe dá um pergaminho selado para entregar a Yunan, comandante de seu exército.
-//             Ela lhe deseja a Sorte de Castis em sua missão e lhe diz para escolher o melhor garanhão de seus estábulos.
-//             Logo você está galopando para fora de Kallamehr.
-//             Risque uma caixa do tempo.
-//             Você já viajou vários quilômetros e está pensando em parar para um gole de cerveja de sua garrafa quando seu cavalo tropeça repentinamente.
-//             TESTE SUA SORTE.
-//             Se tiver sorte volte para 81.
-//             Se for azarado, vá para 192.`,
-//       btns: [{
-//         funcao: testSort(user.sorte),
-//         sortudo: irpara(81),
-//         azarado: irPara(192),
-//         texto: 'TESTE SUA SORTE' 
-//       }]
-//     },
-//     {
-//       ref: 3,
-//       img:'',
-//       texto:'',
-//       btns: [{}]
-//     },
-//     {
-//       ref: 4,
-//       img:'',
-//       texto:'',
-//       btns: [5,6,0]
-//     },
-//     {
-//       ref: 5,
-//       img:'',
-//       texto:'',
-//       btns: [5,6,0]
-//     },
-//     {
-//       ref: 6,
-//       img:'',
-//       texto:'',
-//       btns: [5,6,0]
-//     }
-  ];
+    btns: [2],
+  },
+  //   {
+  //         função: goToRef(1),
+  //         texto: 'AGORA VÁ PARA A REFERÊNCIA 1',
+  //       }]
+  //     },
+  //     {
+  //       ref: 1,
+  //       img:'',
+  //       texto:
+  //         `Como você pode recusar tal apelo?
+  //         Os outros dez são rápidos em se oferecer para a missão, e sua voz se junta aos outros, jurando fidelidade a Lady Carolina.
+  //         Essa é sua chance de se tornar mais que um aventureiro, você será um verdadeiro herói de lendas!
+  //         Você ouve os quatros nobres falarem de seus planos.
+  //         Um de vocês precisa cavalgar para as passagens norte e chamar o exército, outro deve seguir para leste para investigar os invasores.
+  //         O resto deve permanecer em Kallamehr e usar de toda sua inteligência e iventividade para preparar uma defesa.
+  //         O que você vai fazer.
+  //         Voluntariar-se para
+  //         `,
+  //       btns: [
+  //         {
+  //           irpara: 92,
+  //           funcao: goToRef(92),
+  //           texto: 'Vonluntariar-se Para Cavalgar para o norte até o exército?'
+  //         },
+  //         {
+  //           irpara: 104,
+  //           funcao: goToRef(104),
+  //           texto: 'Vonluntariar-se para investigar no leste?'
+  //         },
+  //         {
+  //           irpara: 288,
+  //           funcao: goToRef(288),
+  //           texto: 'Ficar para defender a cidade?'
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       ref: 92,
+  //       img:'',
+  //       texto:`Antes que parta, Lady Carolina lhe dá um pergaminho selado para entregar a Yunan, comandante de seu exército.
+  //             Ela lhe deseja a Sorte de Castis em sua missão e lhe diz para escolher o melhor garanhão de seus estábulos.
+  //             Logo você está galopando para fora de Kallamehr.
+  //             Risque uma caixa do tempo.
+  //             Você já viajou vários quilômetros e está pensando em parar para um gole de cerveja de sua garrafa quando seu cavalo tropeça repentinamente.
+  //             TESTE SUA SORTE.
+  //             Se tiver sorte volte para 81.
+  //             Se for azarado, vá para 192.`,
+  //       btns: [{
+  //         funcao: testSort(user.sorte),
+  //         sortudo: irpara(81),
+  //         azarado: irPara(192),
+  //         texto: 'TESTE SUA SORTE'
+  //       }]
+  //     },
+  //     {
+  //       ref: 3,
+  //       img:'',
+  //       texto:'',
+  //       btns: [{}]
+  //     },
+  //     {
+  //       ref: 4,
+  //       img:'',
+  //       texto:'',
+  //       btns: [5,6,0]
+  //     },
+  //     {
+  //       ref: 5,
+  //       img:'',
+  //       texto:'',
+  //       btns: [5,6,0]
+  //     },
+  //     {
+  //       ref: 6,
+  //       img:'',
+  //       texto:'',
+  //       btns: [5,6,0]
+  //     }
+];
