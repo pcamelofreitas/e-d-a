@@ -23,7 +23,7 @@ function d6() {
 
 const App = () => {
   //states
-  const [logState, setLogState] = useState(false);
+  const [loginState, setLoginState] = useState(false);
   //route
   const [route, setRoute] = useState("signin");
   // refrences----
@@ -42,12 +42,22 @@ const App = () => {
 
   const [sortudo, setSortudo] = useState();
 
+  const loadUser = (data) => {
+    setRef(data.ref);
+    setHab(data.hab);
+    setEne(data.ene);
+    setSor(data.sor);
+    setJoias(data.joias);
+    setTempo(data.tempo);
+    setPocoes(data.pocoes);
+    setItems(data.items);
+    setProvisoes(data.provisoes);
+    setOuro(data.ouro);
+  };
+
   // add and remove items ------------------
-  const addItemtHandler = (item) => {
-    setItems((prevItems) => [
-      ...prevItems,
-      { id: Math.random().toString(), ...item },
-    ]);
+  const addItemHandler = (item) => {
+    setItems((prevItems) => [...prevItems, item]);
   };
   const removeItemHandler = (itemId) => {
     setItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
@@ -66,6 +76,11 @@ const App = () => {
     }
     setSor(sor - 1);
   };
+  //uso de provisão
+  const onProvUse = () => {
+    setEne(ene + 4);
+    setProvisoes(provisoes - 1);
+  };
 
   return (
     <div>
@@ -82,6 +97,7 @@ const App = () => {
             pocoes={pocoes}
             provisoes={provisoes}
             items={items}
+            onProvUse={onProvUse}
           />
           <div className="container text-center">
             <References
@@ -90,6 +106,22 @@ const App = () => {
               testeSorte={testeSorte}
               sortudo={sortudo}
               setEne={setEne}
+              ene={ene}
+              addItemHandler={addItemHandler}
+              setTempo={setTempo}
+              tempo={tempo}
+              items={items}
+              sor={sor}
+              hab={hab}
+              setHab={setHab}
+              setJoias={setJoias}
+              joias={joias}
+              setOuro={setOuro}
+              ouro={ouro}
+              provisoes={provisoes}
+              setProvisoes={setProvisoes}
+              pocoes={pocoes}
+              setPocoes={setPocoes}
             />
           </div>
         </div>
@@ -99,12 +131,12 @@ const App = () => {
           <div className="bg-dark text-white fs-3 text-center vw-100">
             <p>Escravos do Abismo</p>
           </div>
-          <Signin onRouteChange={onRouteChange} />
+          <Signin onRouteChange={onRouteChange} loadUser={loadUser} />
         </div>
       ) : route === "register" ? (
         // registro
         <Register onRouteChange={onRouteChange} />
-      ) : (
+      ) : route === "create" ? (
         <Create
           onRouteChange={onRouteChange}
           sorte={sor}
@@ -114,6 +146,8 @@ const App = () => {
           createHab={setHab}
           createSor={setSor}
         />
+      ) : (
+        <h1>Undefined route</h1>
       )}
       {/* footer */}
       <div className="d-flex justify-content-end position-fixed bottom-0 end-0 bg-dark w-100">
@@ -125,21 +159,21 @@ const App = () => {
 
 export default App;
 
-const itemList = (props) => {
-  return (
-    <section className="ingredient-list">
-      <h2>Loaded items</h2>
-      <ul>
-        {props.items.map((ig) => (
-          <li key={ig.id} onClick={props.onRemoveItem.bind(this, ig.id)}>
-            <span>{ig.title}</span>
-            <span>{ig.amount}x</span>
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
-};
+// const itemList = (props) => {
+//   return (
+//     <section className="ingredient-list">
+//       <h2>Loaded items</h2>
+//       <ul>
+//         {props.items.map((ig) => (
+//           <li key={ig.id} onClick={props.onRemoveItem.bind(this, ig.id)}>
+//             <span>{ig.title}</span>
+//             <span>{ig.amount}x</span>
+//           </li>
+//         ))}
+//       </ul>
+//     </section>
+//   );
+// };
 
 // class App extends Component {
 //   constructor() {

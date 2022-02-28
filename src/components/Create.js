@@ -21,7 +21,34 @@ export const Create = ({
   createSor,
   createHab,
   onRouteChange,
+  loadUser,
 }) => {
+  //postar na table de personagem
+  const onFinishCreation = (event) => {
+    event.preventDefault();
+    fetch("DATABASE_URL", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        ref: "Histórico",
+        sor: sorte,
+        ene: energia,
+        hab: habilidade,
+
+        ouro: 10,
+        joias: 0,
+        pocoes: 0,
+        provisoes: 5,
+        items: ["Mochila", "Espada de aço de Fangthane"],
+      }),
+    })
+      .then((response) => response.json())
+      .then((user) => {
+        loadUser(user);
+        onRouteChange("home");
+      });
+  };
+
   return (
     <div>
       <div className="container">
@@ -65,11 +92,13 @@ export const Create = ({
           <h4>sua sorte inicial é {sorte}</h4>
         </div>
         <div className="m-4">
-          {energia > 1 && habilidade > 1 && sorte > 1 ? (
-            <Button onClick={() => onRouteChange("home")} variant="dark">
-              avançar
-            </Button>
-          ) : null}
+          <Button
+            onClick={onFinishCreation}
+            variant="dark"
+            disabled={energia === 1 && habilidade === 1 && sorte === 1}
+          >
+            avançar
+          </Button>
         </div>
       </div>
     </div>

@@ -44,7 +44,15 @@ const Char = ({ personagem }) => {
           <div className="border  m-1 border-dark">
             <h4>Provisões:</h4>
             <p className="text-center">{personagem.provisoes}</p>
-            <Button variant="dark">usar provisão</Button>
+            <div className="d-flex justify-content-center">
+              <Button
+                variant="dark"
+                onClick={personagem.onProvUse}
+                disabled={personagem.provisoes < 1}
+              >
+                usar provisão
+              </Button>
+            </div>
           </div>
         </div>
       </div>
