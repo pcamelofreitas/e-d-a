@@ -45,7 +45,8 @@ const App = () => {
   const [sortudo, setSortudo] = useState();
 
   const loadUser = (data) => {
-    setUserId(data.userid);
+    console.log(data);
+    // setUserId(data.userid);
     setRef(data.ref);
     setHab(data.hab);
     setEne(data.ene);
@@ -144,6 +145,7 @@ const App = () => {
           onRouteChange={onRouteChange}
           userId={userId}
           setUserId={setUserId}
+          loadUser={loadUser}
         />
       ) : route === "create" ? (
         <Create
@@ -155,6 +157,7 @@ const App = () => {
           createHab={setHab}
           createSor={setSor}
           userId={userId}
+          loadUser={loadUser}
         />
       ) : (
         <h1>Undefined Route</h1>

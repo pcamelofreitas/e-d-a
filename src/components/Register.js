@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Form, Button, Card, FloatingLabel } from "react-bootstrap";
-const Register = ({ onRouteChange, userId, setUserId }) => {
+const Register = ({ onRouteChange, userId, setUserId, loadUser }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,22 +15,28 @@ const Register = ({ onRouteChange, userId, setUserId }) => {
     setPassword(event.target.value);
   };
   const onSubmitRegister = (event) => {
-    setUserId(Math.random());
+    // setUserId(Math.random());
     event.preventDefault();
-    fetch("DATABASE_URL", {
+    fetch("https://eda2-19f96-default-rtdb.firebaseio.com/usuarios.json", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         email: email,
         name: name,
         password: password,
-        userId: userId,
+        // userId: userId,
       }),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        return response.json();
+      })
       .then((user) => {
         if (user) {
+          setUserId(user.name);
+
           onRouteChange("create");
+          console.log(user.name);
+          // loadUser(user);
         }
       });
   };

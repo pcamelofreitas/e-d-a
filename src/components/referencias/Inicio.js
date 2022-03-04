@@ -4,6 +4,7 @@ export const Inicio = ({ goToRef }) => {
   return (
     <div>
       <h1>Início</h1>
+      <img alt="inicio_imagem" src="../imagens/inicio.png" />
       <p>
         Você chega a Kallamehr quando as últimas tropas estão partindo. Você se
         vê em meio a uma cidade estranhamente deserta. A vida continua, mas sem

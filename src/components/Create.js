@@ -27,26 +27,30 @@ export const Create = ({
   //postar na table de personagem
   const onFinishCreation = (event) => {
     event.preventDefault();
-    fetch("DATABASE_URL", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        userId: userId,
-        ref: "Histórico",
-        sor: sorte,
-        ene: energia,
-        hab: habilidade,
+    fetch(
+      `https://eda2-19f96-default-rtdb.firebaseio.com/usuarios/${userId}/stats.json`,
+      {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ref: "historico",
 
-        ouro: 10,
-        joias: 0,
-        pocoes: 0,
-        provisoes: 5,
-        items: ["Mochila", "Espada de aço de Fangthane"],
-      }),
-    })
+          sor: sorte,
+          ene: energia,
+          hab: habilidade,
+
+          ouro: 10,
+          joias: 0,
+          pocoes: 0,
+          provisoes: 5,
+          items: ["Mochila", "Espada de aço de Fangthane"],
+        }),
+      }
+    )
       .then((response) => response.json())
       .then((user) => {
         loadUser(user);
+        console.log(user);
         onRouteChange("home");
       });
   };
