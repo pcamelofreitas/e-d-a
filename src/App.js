@@ -105,7 +105,10 @@ const App = () => {
             items={items}
             onProvUse={onProvUse}
           />
-          <div className="container text-center">
+          <div
+            className="container text-center"
+            style={{ overflowY: "scroll", height: "500px" }}
+          >
             <References
               id={ref}
               goToRef={setRef}

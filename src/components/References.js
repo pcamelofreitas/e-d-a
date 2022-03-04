@@ -104,7 +104,12 @@ const References = ({
       );
 
     default:
-      return <h1>inProgress</h1>;
+      return (
+        <div>
+          <h1>Obrigado por jogar</h1>
+          <p>Desenvolvimento em andamento...</p>
+        </div>
+      );
   }
 };
 export default References;
