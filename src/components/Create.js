@@ -22,6 +22,7 @@ export const Create = ({
   createHab,
   onRouteChange,
   loadUser,
+  userId,
 }) => {
   //postar na table de personagem
   const onFinishCreation = (event) => {
@@ -30,6 +31,7 @@ export const Create = ({
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
+        userId: userId,
         ref: "Histórico",
         sor: sorte,
         ene: energia,

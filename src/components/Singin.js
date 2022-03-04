@@ -43,6 +43,7 @@ const Singin = ({ onRouteChange, loadUser }) => {
             type="email"
             placeholder="name@example.com"
             onChange={onEmailChange}
+            required
           />
         </FloatingLabel>
         <FloatingLabel controlId="floatingPassword" label="Password">
@@ -50,6 +51,7 @@ const Singin = ({ onRouteChange, loadUser }) => {
             type="password"
             placeholder="Password"
             onChange={onPasswordChange}
+            required
           />
         </FloatingLabel>
         <div className="d-flex justify-content-center">

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Form, Button, Card, FloatingLabel } from "react-bootstrap";
-const Register = ({ onRouteChange }) => {
+const Register = ({ onRouteChange, userId, setUserId }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,6 +15,7 @@ const Register = ({ onRouteChange }) => {
     setPassword(event.target.value);
   };
   const onSubmitRegister = (event) => {
+    setUserId(Math.random());
     event.preventDefault();
     fetch("DATABASE_URL", {
       method: "POST",
@@ -23,6 +24,7 @@ const Register = ({ onRouteChange }) => {
         email: email,
         name: name,
         password: password,
+        userId: userId,
       }),
     })
       .then((response) => response.json())

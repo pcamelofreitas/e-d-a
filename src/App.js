@@ -24,6 +24,7 @@ function d6() {
 const App = () => {
   //states
   // const [loginState, setLoginState] = useState(false);
+  const [userId, setUserId] = useState("");
   //route
   const [route, setRoute] = useState("signin");
   // refrences----
@@ -31,6 +32,7 @@ const App = () => {
 
   //character stats
   const [sor, setSor] = useState(1);
+
   const [ene, setEne] = useState(1);
   const [hab, setHab] = useState(1);
   const [ouro, setOuro] = useState(0);
@@ -43,6 +45,7 @@ const App = () => {
   const [sortudo, setSortudo] = useState();
 
   const loadUser = (data) => {
+    setUserId(data.userid);
     setRef(data.ref);
     setHab(data.hab);
     setEne(data.ene);
@@ -137,7 +140,11 @@ const App = () => {
         </div>
       ) : route === "register" ? (
         // registro
-        <Register onRouteChange={onRouteChange} />
+        <Register
+          onRouteChange={onRouteChange}
+          userId={userId}
+          setUserId={setUserId}
+        />
       ) : route === "create" ? (
         <Create
           onRouteChange={onRouteChange}
@@ -147,9 +154,10 @@ const App = () => {
           createEne={setEne}
           createHab={setHab}
           createSor={setSor}
+          userId={userId}
         />
       ) : (
-        <h1>Undefined route</h1>
+        <h1>Undefined Route</h1>
       )}
       {/* footer */}
       <div className="d-flex justify-content-end position-fixed bottom-0 end-0 bg-dark w-100">
